@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { todoReducer } from '../containers/ToDo/todoSlice.ts';
+import { tasksItemReducer } from '../components/Tasks/tasksItemState.ts';
 
 export const store = configureStore({
   reducer: {
-    todo: todoReducer,
+    tasksItem: tasksItemReducer,
   },
 });
 export type RootState = ReturnType<typeof store.getState>;

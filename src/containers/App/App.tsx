@@ -1,12 +1,11 @@
-import ToDo from "../ToDo/ToDo.tsx";
+import Tasks from '../../components/Tasks/Tasks.tsx';
 
 function App() {
-
   return (
-      <>
-        <ToDo/>
-      </>
-  )
+    <div className="container mx-auto pt-5">
+      <Tasks />
+    </div>
+  );
 }
 
 export default App

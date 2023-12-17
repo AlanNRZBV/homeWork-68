@@ -1,16 +1,16 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface ToDoState {
+interface TasksItemState {
   title: string;
   status: boolean;
 }
-const initialState: ToDoState = {
+const initialState: TasksItemState = {
   title: '',
   status: false,
 };
 
-export const todoSlice = createSlice({
-  name: 'todo',
+export const tasksItemState = createSlice({
+  name: 'tasksItem',
   initialState,
   reducers: {
     addTitle: (state, action: PayloadAction<string>) => {
@@ -22,5 +22,5 @@ export const todoSlice = createSlice({
   },
 });
 
-export const todoReducer = todoSlice.reducer;
-export const { addTitle, changeStatus } = todoSlice.actions;
+export const tasksItemReducer = tasksItemState.reducer;
+export const { addTitle, changeStatus } = tasksItemState.actions;
