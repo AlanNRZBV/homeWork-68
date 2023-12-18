@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface TasksItemState {
+export interface TasksItemState {
   title: string;
   status: boolean;
 }
