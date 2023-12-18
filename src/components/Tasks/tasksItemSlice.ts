@@ -3,10 +3,12 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 export interface TasksItemState {
   title: string;
   status: boolean;
+  id: string;
 }
 const initialState: TasksItemState = {
   title: '',
   status: false,
+  id: '',
 };
 
 export const tasksItemState = createSlice({
@@ -16,11 +18,11 @@ export const tasksItemState = createSlice({
     addTitle: (state, action: PayloadAction<string>) => {
       state.title = action.payload;
     },
-    changeStatus: (state, action: PayloadAction<boolean>) => {
-      state.status = action.payload;
+    resetTitle: (state) => {
+      state.title = '';
     },
   },
 });
 
 export const tasksItemReducer = tasksItemState.reducer;
-export const { addTitle, changeStatus } = tasksItemState.actions;
+export const { addTitle, resetTitle } = tasksItemState.actions;
